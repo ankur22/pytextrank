@@ -418,7 +418,7 @@ def enumerate_chunks (phrase, spacy_nlp):
     if (len(phrase) > 1):
         found = False
         text = " ".join([rl.text for rl in phrase])
-        doc = spacy_nlp(text.strip(), parse=True)
+        doc = spacy_nlp(text.strip())
 
         for np in doc.noun_chunks:
             if np.text != text:
